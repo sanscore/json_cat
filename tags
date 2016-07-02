@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Array	lib/json_cat/ext/array.rb	/^class Array$/;"	c
+Hash	lib/json_cat/ext/hash.rb	/^class Hash$/;"	c
+JsonCat	lib/json_cat.rb	/^module JsonCat$/;"	m
+JsonCat	lib/json_cat/version.rb	/^module JsonCat$/;"	m
+JsonPrettyPrinter	lib/json_cat.rb	/^  class JsonPrettyPrinter$/;"	c	class:JsonCat
+Kernel	lib/json_cat/ext/kernel.rb	/^module Kernel$/;"	m
+Object	lib/json_cat/ext/object.rb	/^class Object$/;"	c
+bow_print	lib/json_cat/ext/kernel.rb	/^  def bow_print(obj)$/;"	f	class:Kernel
+initialize	lib/json_cat.rb	/^    def initialize(**opts)$/;"	f	class:JsonCat.JsonPrettyPrinter
+json_parse	lib/json_cat.rb	/^    def json_parse(json)$/;"	f	class:JsonCat.JsonPrettyPrinter
+print	lib/json_cat.rb	/^    def print(line)$/;"	f	class:JsonCat.JsonPrettyPrinter
+print_hash	lib/json_cat.rb	/^    def print_hash(json)$/;"	f	class:JsonCat.JsonPrettyPrinter
+rainbow_print	lib/json_cat/ext/array.rb	/^  def rainbow_print(level=0)$/;"	f	class:Array
+rainbow_print	lib/json_cat/ext/hash.rb	/^  def rainbow_print(level=0)$/;"	f	class:Hash
+rainbow_print	lib/json_cat/ext/object.rb	/^  def rainbow_print(level=0)$/;"	f	class:Object

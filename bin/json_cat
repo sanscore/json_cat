@@ -1,0 +1,65 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+require 'json_cat'
+
+
+options = {
+  grep: nil,
+  omit: [],
+  parse: [],
+  sort: false,
+  timestamp: false,
+}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: json_cat [options]"
+
+  opts.on("-c", "--[no-]color", "Colorize output (default: --color)") do |c|
+    Rainbow.enabled = c
+  end
+
+  opts.on("--grep key", "Filter out JSON without key") do |key|
+    options[:grep] = key
+  end
+
+  opts.on("-h", "--help", "Prints this help") do
+    puts opts
+    exit
+  end
+
+  opts.on("-o", "--omit key[,key]", Array, "Omit keys from JSON") do |keys|
+    options[:omit] = keys
+  end
+
+  opts.on("-p", "--parse key[,key]", Array, "Parse Key-value as JSON") do |keys|
+    options[:parse] = keys
+  end
+
+  opts.on("-s", "--[no-]sort", "Sort keys") do |s|
+    options[:sort] = s
+  end
+
+  opts.on("-t", "--[no-]timestamp", "Timestamp lines") do |t|
+    options[:timestamp] = t
+  end
+end.parse!
+
+
+jp = JsonCat::JsonPrettyPrinter.new(options)
+
+begin
+  if ARGV.length > 0
+    ARGV.each do |filename|
+      File.open(filename) do |f|
+        f.each_line { |line| jp.print line }
+      end
+    end
+  else
+    while gets()
+      jp.print $_
+    end
+  end
+rescue Interrupt
+end
