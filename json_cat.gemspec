@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Pretty print JSON files and standard input}
   spec.description   = %q{Format JSON to be easier to read; colorize, sort keys, etc. }
-  spec.homepage      = "https://github.com/sanscore/./"
+  spec.homepage      = "https://github.com/sanscore/json_cat/"
 
   if spec.respond_to?(:metadata)
     spec.metadata['allowed_push_host'] = 'https://rubygems.org'

@@ -37,9 +37,7 @@ module JsonCat
       x.each {|k,v| x[k] = parse.include?(k) ? json_parse(v) : v }
       x = x.sort.to_h if sort
 
-      if timestamp
-        x = {"timestamp": Time.now.httpdate, "line-#{count}": x}
-      end
+      x["__json_cat_ts"] = Time.now.httpdate if timestamp
       bow_print x
     end
 
