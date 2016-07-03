@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/json_cat.svg)](https://badge.fury.io/rb/json_cat)
+
 # JsonCat
 
 Pretty print JSON files and standard input
