@@ -10,6 +10,12 @@ class Array
     rainbow_print_build(level)
   end
 
+  if RUBY_VERSION < '2.1'
+    def to_h
+      Hash[*flatten]
+    end
+  end
+
 private
 
   def rainbow_print_open_bracket(level)

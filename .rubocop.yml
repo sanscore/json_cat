@@ -1,0 +1,28 @@
+AllCops:
+  DisplayCopNames: true
+
+Lint/HandleExceptions:
+  Enabled: false
+
+Style/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Style/Documentation:
+  Exclude:
+    - 'lib/json_cat/ext/*'
+    - 'test/**/*'
+
+Style/Encoding:
+  Enabled: true
+  EnforcedStyle: always
+
+Style/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+  EnforcedStyle: no_space
+
+Style/SymbolArray:
+  Enabled: true
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
+
